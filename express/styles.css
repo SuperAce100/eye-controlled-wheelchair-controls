@@ -30,7 +30,8 @@ h1 {
 }
 
 .button:active {
-    background-color: teal;
+    background-color: lightcoral;
+    border-color: lightcoral;
     color: black;
     transition: 0s;
 }
