@@ -3,11 +3,40 @@ body {
     font-family:"Rubik", Lucida Grande, Verdana, sans-serif;
     color: aquamarine;
     text-align: center;
+    
 }
 
 h1 {
     font-weight: 600;
-    font-size: 4em;
+    font-size: 2em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.section {
+    width: 50%;
+    margin: 0%;
+}
+
+.letter-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 1%;
+    grid-gap: 2%;
+}
+
+.letter-grid-container > div {
+    font-size: 3em;
+    padding: 0.5em;
+}
+
+.spoken {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: left;
 }
 
 .button {
@@ -17,8 +46,16 @@ h1 {
     background-color: black;
     color: aquamarine;
     font-weight: 400;
-    font-size: 6em;
     font-family:"Rubik", Lucida Grande, Verdana, sans-serif;
+}
+
+.accent {
+    color: lightcoral;
+    border-color: lightcoral;
+}
+
+.nav-button {
+    font-size: 6em;
     padding: 0.5em;
 }
 
@@ -46,7 +83,9 @@ h1 {
 }
 
 .horizontal-button {
-    flex: 1;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+
 }
 
 .right-button {

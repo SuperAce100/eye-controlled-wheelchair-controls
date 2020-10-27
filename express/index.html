@@ -3,6 +3,7 @@
     <title>Gaze-to-life UI Test</title>
     <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
+    <script src="scripts.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
@@ -10,19 +11,47 @@
     <h1>
         Gaze-to-life UI Test
     </h1>
-    <button class="up-button vertical-button button">
-        <i class="fas fa-angle-up"></i>
-    </button>
-    <br>
-    <button class="left-button horizontal-button button">
-        <i class="fas fa-angle-left"></i>
-    </button>
-    <button class="right-button horizontal-button button">
-        <i class="fas fa-angle-right"></i>
-    </button>
-    <br>
-
-    <button class="down-button vertical-button button">
-        <i class="fas fa-angle-down"></i>
-    </button>
+    <div class="container">
+        <div class="left-section section">
+            <button class="nav-button up-button vertical-button button">
+                <i class="fas fa-angle-up"></i>
+            </button>
+            <br>
+            <button class="nav-button left-button horizontal-button button">
+                <i class="fas fa-angle-left"></i>
+            </button>
+            <button class="nav-button right-button horizontal-button button">
+                <i class="fas fa-angle-right"></i>
+            </button>
+            <br>
+        
+            <button class="nav-button down-button vertical-button button">
+                <i class="fas fa-angle-down"></i>
+            </button>
+        </div>
+        <div class="right-section section">
+            
+            <div class="letter-grid-container">
+                <div class="spoken" id="speech">-</div>
+                <div class="button accent" id="speak" onclick="speakCurrentWord()">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <div class="button" id="A" onclick="registerInput(this.id)">A</div>
+                <div class="button" id="E" onclick="registerInput(this.id)">E</div>
+                <div class="button" id="I" onclick="registerInput(this.id)">I</div>  
+                <div class="button" id="O" onclick="registerInput(this.id)">O</div>
+                <div class="button" id="U" onclick="registerInput(this.id)">U</div>
+                <div class="button" id="S" onclick="registerInput(this.id)">S</div>  
+                <div class="button" id="T" onclick="registerInput(this.id)">T</div>
+                <div class="button" id="R" onclick="registerInput(this.id)">R</div>
+                <div class="button" id="L" onclick="registerInput(this.id)">L</div>
+                <div class="button" id="C" onclick="registerInput(this.id)">C</div>
+                <div class="button" id="K" onclick="registerInput(this.id)">K</div>
+                <div class="button accent" id="delete" onclick="deleteCharacter()">
+                    <i class="fas fa-backspace"></i>
+                </div>
+              </div>
+        </div>
+    </div>
 </body>
+
