@@ -49,6 +49,12 @@ h1 {
     font-family:"Rubik", Lucida Grande, Verdana, sans-serif;
 }
 
+.scroll {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    text-align: left;
+}
+
 .accent {
     color: lightcoral;
     border-color: lightcoral;
