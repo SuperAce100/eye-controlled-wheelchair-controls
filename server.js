@@ -40,6 +40,18 @@ app.get('/direction/:direction', (req, res) => {
   console.log("pin", pin)
 
   var chosenpin = new five.Pin(pin);
+  var servo = new five.Servo({
+    pin: 10,
+    center: true,
+  });
+
+  if (pin == forwardpin) {
+    console.log("Servo to max");
+    servo.max();
+  } if (pin == backwardpin) {
+    console.log("Servo to min");
+    servo.min();
+  }
   
   chosenpin.query(function(state) {
     console.log(state.value);
