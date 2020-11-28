@@ -11,7 +11,7 @@ function say(m) {
   speechSynthesis.getVoices().forEach(function(voice) {
     console.log(voice.name, voice.default ? voice.default :'');
   });
-  msg.voice = voices[16];
+  msg.voice = voices[0];
   msg.rate = 0.8;
   window.speechSynthesis.speak(msg);  
 }
