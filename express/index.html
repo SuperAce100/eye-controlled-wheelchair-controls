@@ -4,28 +4,29 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <script src="scripts.js"></script>
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>
-        Gaze-to-life UI Test
-    </h1>
     <div class="container">
         <div class="left-section section">
-            <button class="nav-button up-button vertical-button button">
+            <h1>
+                Gaze-to-life UI Test
+            </h1>
+            <button class="nav-button up-button vertical-button button" id="forward" onclick="directionalInput(this.id)">
                 <i class="fas fa-angle-up"></i>
             </button>
             <br>
-            <button class="nav-button left-button horizontal-button button">
+            <button class="nav-button left-button horizontal-button button" id="left" onclick="directionalInput(this.id)">
                 <i class="fas fa-angle-left"></i>
             </button>
-            <button class="nav-button right-button horizontal-button button">
+            <button class="nav-button right-button horizontal-button button" id="right" onclick="directionalInput(this.id)">
                 <i class="fas fa-angle-right"></i>
             </button>
             <br>
         
-            <button class="nav-button down-button vertical-button button">
+            <button class="nav-button down-button vertical-button button" id="backward" onclick="directionalInput(this.id)">
                 <i class="fas fa-angle-down"></i>
             </button>
         </div>
@@ -41,12 +42,20 @@
                 <div class="button" id="I" onclick="registerInput(this.id)">I</div>  
                 <div class="button" id="O" onclick="registerInput(this.id)">O</div>
                 <div class="button" id="U" onclick="registerInput(this.id)">U</div>
-                <div class="button" id="S" onclick="registerInput(this.id)">S</div>  
+                <div class="button" id="R" onclick="registerInput(this.id)">R</div>  
                 <div class="button" id="T" onclick="registerInput(this.id)">T</div>
-                <div class="button" id="R" onclick="registerInput(this.id)">R</div>
+                <div class="button" id="N" onclick="registerInput(this.id)">N</div>
+                <div class="button" id="S" onclick="registerInput(this.id)">S</div>
                 <div class="button" id="L" onclick="registerInput(this.id)">L</div>
                 <div class="button" id="C" onclick="registerInput(this.id)">C</div>
-                <div class="button" id="K" onclick="registerInput(this.id)">K</div>
+                <div class="button" id="D" onclick="registerInput(this.id)">D</div>
+                <div class="button" id="P" onclick="registerInput(this.id)">P</div>
+                <div class="button" id="M" onclick="registerInput(this.id)">M</div>
+                <div class="button" id="H" onclick="registerInput(this.id)">H</div>
+                <div class="button" id="G" onclick="registerInput(this.id)">G</div>
+                <div class="button" id="B" onclick="registerInput(this.id)">B</div>
+                <div class="button" id="F" onclick="registerInput(this.id)">F</div>
+                <div class="button" id="Y" onclick="registerInput(this.id)">Y</div>
                 <div class="button accent" id="delete" onclick="deleteCharacter()">
                     <i class="fas fa-backspace"></i>
                 </div>
