@@ -30,7 +30,12 @@ h1 {
 
 .letter-grid-container > div {
     font-size: 3em;
-    padding: 0.5em;
+    padding-top: 0.4em;
+    padding-left: 0.5em;
+    padding-bottom: 0.4em;
+    padding-right: 0.5em;
+
+
 }
 
 .spoken {
@@ -72,6 +77,11 @@ h1 {
     transition: 0s;
 }
 
+.accent:active {
+    background-color: red;
+}
+
+
 .vertical-button {
     /* margin-bottom: 0.5em;
     margin-top: 0.5em; */
@@ -86,11 +96,20 @@ h1 {
     margin-bottom: 0.25em;
 
 }
+.accent:hover{
+    background-color: lightcoral;
+}
 
 .right-button {
-    margin-left: 20%;
+    margin-left: 5%;
 }
 
 .left-button {
-    margin-right: 20%;
+    margin-right: 5%;
+}
+
+.stop-button {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    
 }

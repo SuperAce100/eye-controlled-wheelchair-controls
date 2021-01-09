@@ -14,54 +14,70 @@ app.use('/web/', function(req,res){
   //__dirname : It will resolve to your project folder.
 });
 var board = new five.Board();
+
+var servo;
+var startPosition = 120;
+var min = 85;
+var max = 155;
+var timer = 400;
+
+
+board.on("ready", function() {
+  
+  
+  servo = new five.Servo({
+    pin: 10,
+    range: [min,max],
+    center: true,
+  });
+
+  turnMotor = new five.Servo({
+    pin: 9,
+    range: [min,max],
+    center: true,
+  });
+})
+
+
+
+
 app.get('/direction/:direction', (req, res) => {
   
-  var pin = 0;
-  const forwardpin = 4;
-  const backwardpin = 8;
-  const leftpin = 7;
-  const rightpin = 12;
-
-
   direction = req.params.direction;
 
   console.log(direction);
 
-  switch (direction) {
-    case ('forward') : pin = forwardpin; break;
-    case ('backward') : pin = backwardpin; break;
-    case ('left') : pin = leftpin; break;
-    case ('right') : pin = rightpin; break;
-    default :
-      console.log("not forward");
-    
+  
+
+  if (direction == 'forward') {
+    // console.log("Servo to max");
+    servo.to(min,timer/2);
+    servo.to(min+1,timer*2);
+    servo.to(startPosition,timer*9);
+  } if (direction == 'backward') {
+    // console.log("Servo to min");
+    servo.to(max,timer/2);
+    servo.to(max-1,timer*2);
+
+    servo.to(startPosition,timer*9);
+  } if (direction == 'right') {
+    // console.log("Servo to max");
+    turnMotor.to(min,timer/2);
+    turnMotor.to(min+1,timer*2);
+    turnMotor.to(startPosition,timer*9);
+  } if (direction == 'left') {
+    // console.log("Servo to min");
+    turnMotor.to(max,timer/2);
+    turnMotor.to(max-1,timer*2);
+    turnMotor.to(startPosition,timer*9);
   }
+  else {
+    servo.to(startPosition,timer/2);
+    turnMotor.to(startPosition,timer/2);
 
-  console.log("pin", pin)
-
-  var chosenpin = new five.Pin(pin);
-  var servo = new five.Servo({
-    pin: 10,
-    center: true,
-  });
-
-  if (pin == forwardpin) {
-    console.log("Servo to max");
-    servo.max();
-  } if (pin == backwardpin) {
-    console.log("Servo to min");
-    servo.min();
   }
   
-  chosenpin.query(function(state) {
-    console.log(state.value);
-    if (state.value == 0){
-      chosenpin.high();
-    }
-    else {
-      chosenpin.low();
-    }
-  });
+  
   
 
 
