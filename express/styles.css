@@ -1,7 +1,7 @@
 body {
-    background-color:black;
+    background-color:white;
     font-family:"Rubik", Lucida Grande, Verdana, sans-serif;
-    color: aquamarine;
+    color: darkslategrey;
     text-align: center;
     
 }
@@ -46,17 +46,17 @@ h1 {
 
 .button {
     border: 2px solid;
-    border-color: aquamarine;
+    border-color: darkslategrey;
     border-radius: 20px;
-    background-color: black;
-    color: aquamarine;
+    background-color: white;
+    color: darkslategrey;
     font-weight: 400;
     font-family:"Rubik", Lucida Grande, Verdana, sans-serif;
 }
 
 .accent {
-    color: lightcoral;
-    border-color: lightcoral;
+    color: darkred;
+    border-color: darkred;
 }
 
 .nav-button {
@@ -65,15 +65,15 @@ h1 {
 }
 
 .button:hover {
-    background-color: aquamarine;
-    color: black;
+    background-color: darkslategrey;
+    color: white;
     transition: 1.8s;
 
 }
 
 .button:active {
-    background-color: teal;
-    color: black;
+    background-color: darkslategrey;
+    color: white;
     transition: 0s;
 }
 
@@ -97,7 +97,7 @@ h1 {
 
 }
 .accent:hover{
-    background-color: lightcoral;
+    background-color: darkred;
 }
 
 .right-button {
